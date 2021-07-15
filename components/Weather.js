@@ -21,8 +21,24 @@ export default function Weather(props) {
 }
 const styles = StyleSheet.create({
   backdrop: {
-    alignItems: "center",
-    width: "100%",
-    height: "100%",
+
+      flexDirection: 'column',
+      alignItems: 'center',
+      width: '100%',
+      height: '100%',
+      
   },
+  container: {
+      padding: 15,
+      width:'100%',
+      height:'100%',
+      alignItems:'center',
+      backgroundColor:'#000',
+      opacity: 0.5,
+      
+  },
+  text:{
+      fontSize:24,
+      color:'#fff',
+  }
 });
