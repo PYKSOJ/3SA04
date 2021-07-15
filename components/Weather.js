@@ -3,7 +3,7 @@ import { ImageBackground, Text, StyleSheet, View } from "react-native";
 import Forecast from "./Forecast";
 
 export default function Weather(props) {
-  const [forecastInfo, setForcecastInfo] = useState({
+  const [forecastInfo/*, setForcecastInfo*/] = useState({
     main: "-",
     description: "-",
     temp: 0,
