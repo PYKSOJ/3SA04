@@ -29,12 +29,25 @@ export default function App() {
             },
           }}
         />
-        <Stack.Screen name="Weather" component={WeatherScreen} />
+        <Stack.Screen
+          name="Weather"
+          component={WeatherScreen}
+          options={{
+            title: "Status",
+            headerStyle: {
+              backgroundColor: "#FA2",
+            },
+            headerTitleStyle: {
+              alignItems: "left",
+              fontWeight: "bold",
+              alignSelf: "center",
+            },
+          }}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );
 }
-
 const styles = StyleSheet.create({
   container: {
     paddingTop: Constants.statusBarHeight,
