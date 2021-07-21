@@ -1,21 +1,19 @@
 import React from "react";
-import { View, Text, Image, StyleSheet,} from "react-native";
+import { View, Text, Image, StyleSheet } from "react-native";
 export default function Forecast(props) {
   const image = "http://openweathermap.org/img/wn/" + props.icon + ".png";
   return (
     <View>
-      <Text style={styles.titleText}>Country: {props.country} </Text>
-      <Text style={styles.titleText}>City: {props.name}</Text>
-      <Text style={styles.titleText}>
-        {props.main} {props.description}
-      </Text>
+      <Text style={styles.titleText}>ประเทศ {props.country} </Text>
+      <Text style={styles.titleText}>จังหวัด {props.name}</Text>
+      <Text style={styles.titleText}>Cloud Detial :{props.description}</Text>
       <Image source={{ url: image }} style={styles.saaa} />
       <Text style={styles.titleText}>Temperater : {props.temp} °C</Text>
       <Text style={styles.titleText}>
-        Temperater maximum : {props.tempmax} °C
+        Max Temperater : {props.tempmax} °C
       </Text>
       <Text style={styles.titleText}>
-        Temperater minimum : {props.tempmin} °C
+        Min Temperater : {props.tempmin} °C
       </Text>
     </View>
   );
