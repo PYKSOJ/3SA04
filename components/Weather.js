@@ -7,12 +7,8 @@ export default function Weather(props) {
     main: "-",
     description: "-",
     temp: 0,
-    country: "-",
-    name: "-",
-    tempmax: 0,
-    tempmin: 0,
-    icon: "-",
   });
+
   useEffect(() => {
     console.log(`fetching data with zipCode = ${props.zipCode}`);
     if (props.zipCode) {
@@ -40,7 +36,8 @@ export default function Weather(props) {
 
   return (
     <ImageBackground source={require("../bg.jpg")} style={styles.backdrop}>
-      <Text style={styles.titleText}>Zip Code : {props.zipCode}</Text>
+      <Text>Zip Code</Text>
+      <Text>{props.zipCode}</Text>
       <Forecast {...forecastInfo} />
     </ImageBackground>
   );
@@ -52,10 +49,5 @@ const styles = StyleSheet.create({
     alignItems: "center",
     width: "100%",
     height: "100%",
-  },
-  titleText: {
-    fontSize: 25,
-    fontWeight: "bold",
-    color: "white",
   },
 });
